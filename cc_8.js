@@ -27,7 +27,7 @@ console.log("**Task 3**") //for easier console readability
 calculateServiceFee(200, "Premium") // calls function
 calculateServiceFee(500, "Standard") // calls function
 
-//Task 4 - Car Rental cost Calculation unfinished
+//Task 4 - Car Rental cost Calculation 
 function calculateRentalCost(days, carType, insurance = false) {  //declares the function and assigns variables
     let carCosts = {"Economy": 40,"Standard":60,"Luxury":100}; // creates object that contains a key of each cartype and a value of each cost
     let finalCost =(carCosts[carType]* days)  // calculates car type cost per day
@@ -39,3 +39,12 @@ function calculateRentalCost(days, carType, insurance = false) {  //declares the
 console.log("**Task 4**"); // for console readability
 calculateRentalCost(3, "Economy", true); // calls function
 calculateRentalCost(5, "Luxury", false); // calls function
+
+//Task 5 - Loan Payment Calculations
+function calculateLoanPayment(principal, rate, time) { //creates the function and the parameters
+    let totalPayment = principal + (principal * rate * time); // calculates total payment
+    console.log(`Total Payment: $${totalPayment.toFixed(2)}`); // logs total payment to the console
+};
+console.log("**Task 5**"); // for console readability
+calculateLoanPayment(1000, 0.05, 2); // calls function
+calculateLoanPayment(5000, 0.07, 3); // calls function

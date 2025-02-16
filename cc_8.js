@@ -49,7 +49,7 @@ console.log("**Task 5**"); // for console readability
 calculateLoanPayment(1000, 0.05, 2); // calls function
 calculateLoanPayment(5000, 0.07, 3); // calls function
 
-// Task 6 -  Indentifying Large Transations
+//Task 6 -  Indentifying Large Transations
 let transactions = [200, 1500, 3200, 800, 2500]; // declares an array
 function filterLargeTransactions(transactions, filterFunction) {   // declares a function with parameters
     let filteredTransactions = transactions.filter(filterFunction); // applies a filter to transactions using the function inputed in the parameters
@@ -57,3 +57,16 @@ function filterLargeTransactions(transactions, filterFunction) {   // declares a
 };
 console.log("**Task 6**"); // for console readability
 filterLargeTransactions(transactions, amount => amount > 1000 ? amount : 0); // calls function  with filter function inputed
+
+//Task 7 - Shopping Cart Tracker
+function createCartTracker() { //creates a function
+    let total = 0 // sets total equal to 0
+    return function cartTracker(amount) { // creates nested function and parameter
+        total += amount // adds amount to the current total
+        return 'Total Cart Value: $' + total // logs total to the console
+    }
+};
+let cart = createCartTracker();
+console.log("**Task 7**"); // for console readability
+console.log(cart(20)); // calls function and logs to console
+console.log(cart(35)); //calls function and logs to console

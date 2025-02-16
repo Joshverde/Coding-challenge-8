@@ -26,3 +26,16 @@ let calculateServiceFee = (amount, serviceType) => { // creates the arrow functi
 console.log("**Task 3**") //for easier console readability
 calculateServiceFee(200, "Premium") // calls function
 calculateServiceFee(500, "Standard") // calls function
+
+//Task 4 - Car Rental cost Calculation unfinished
+function calculateRentalCost(days, carType, insurance = false) {  //declares the function and assigns variables
+    let carCosts = {"Economy": 40,"Standard":60,"Luxury":100}; // creates object that contains a key of each cartype and a value of each cost
+    let finalCost =(carCosts[carType]* days)  // calculates car type cost per day
+    if (insurance) { // checks if insurance === True
+        finalCost += 20 *days; // adds 20 per day to final cost if insurance is true
+    } 
+    console.log(`Total Rental Cost: $${finalCost}`); // logs answer to the console
+};
+console.log("**Task 4**"); // for console readability
+calculateRentalCost(3, "Economy", true); // calls function
+calculateRentalCost(5, "Luxury", false); // calls function

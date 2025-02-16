@@ -58,7 +58,7 @@ function filterLargeTransactions(transactions, filterFunction) {   // declares a
 console.log("**Task 6**"); // for console readability
 filterLargeTransactions(transactions, amount => amount > 1000 ? amount : 0); // calls function  with filter function inputed
 
-//Task 7 - Shopping Cart Tracker
+//Task 7 -Shopping Cart Tracker
 function createCartTracker() { //creates a function
     let total = 0 // sets total equal to 0
     return function cartTracker(amount) { // creates nested function and parameter
@@ -70,3 +70,13 @@ let cart = createCartTracker();
 console.log("**Task 7**"); // for console readability
 console.log(cart(20)); // calls function and logs to console
 console.log(cart(35)); //calls function and logs to console
+
+//Task 8 - Savings Growth Projection
+function caclulateSavings(years, amount) {
+    if (years >= 10) return console.log(`projected Savings: $${amount.toFixed(2)}`);  //returns current amount when years is greater than or equal to 10
+    return caclulateSavings(years + 1, amount * 1.05); // adds 1 to years parameter and 5% to amount parameter
+    
+};
+console.log("**Task 8**");// for console readability
+caclulateSavings(8,1000); // calls function
+caclulateSavings(5,5000); // calls function
